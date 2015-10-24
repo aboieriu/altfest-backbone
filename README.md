@@ -1,6 +1,9 @@
 # Song manager - Altfest
 This is a small SPA used as a proof of concept of backbone / marionette for ALTFESTIVAL (2015 edition). 
 
+#Prerquisites
+Install NODE JS
+
 Learn more about backbone : http://backbonejs.org/ 
 Learn more about marionette : http://marionettejs.com/
 #Install and run the REST service
