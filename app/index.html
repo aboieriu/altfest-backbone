@@ -30,50 +30,6 @@
 
         </div>
     </nav>
-
-    <div id="content" class="container">
-
-    </div>
-
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../bower_components/underscore/underscore-min.js"></script>
-    <script src="../bower_components/backbone/backbone.js"></script>
-    <script src="../bower_components/marionette/lib/backbone.marionette.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/service.js"></script>
-
-    <!-- Views -->
-    <script src="js/modules/home/view/create-artist-view.js"></script>
-    <script src="js/modules/home/view/artist-view.js"></script>
-    <script src="js/modules/home/view/artists-view.js"></script>
-    <script src="js/modules/home/view/home-layout.js"></script>
-    <script src="js/modules/artist/view/create-artist-song-view.js"></script>
-    <script src="js/modules/artist/view/artist-view.js"></script>
-    <script src="js/modules/artist/view/artist-song-view.js"></script>
-    <script src="js/modules/artist/view/artist-songs-view.js"></script>
-    <script src="js/modules/artist/view/artist-layout.js"></script>
-
-    <!-- Mdels -->
-    <script src="js/modules/home/model/artist.js"></script>
-    <script src="js/modules/home/model/artists.js"></script>
-    <script src="js/modules/artist/model/song.js"></script>
-    <script src="js/modules/artist/model/songs.js"></script>
-
-    <!-- Controllers -->
-    <script src="js/modules/home/controller/controller.js"></script>
-    <script src="js/modules/artist/controller/controller.js"></script>
-    <!-- Routers -->
-    <script src="js/modules/home/router.js"></script>
-    <script src="js/modules/artist/router.js"></script>
-
-    <!-- app -->
-    <script src="js/app.js"></script>
-
-    <script>
-        $.get('templates.html').then(function(data){
-            $('body').append(data);
-            SongManager.start();
-        });
-    </script>
+    <div id="content" class="container"></div>
 </body>
 </html>
