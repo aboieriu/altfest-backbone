@@ -1,0 +1,12 @@
+{
+  "name": "SongManager-backbone",
+  "version": "0.0.1",
+  "description": "Proof of concept SPA",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aboieriu/altfest-backbone"
+  },
+  "dependencies": {
+    "node-static": "^0.7.7"
+  }
+}
