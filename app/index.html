@@ -27,9 +27,42 @@
                     <div class="bar"></div>
                 </div>
             </div>
-
         </div>
     </nav>
-    <div id="content" class="container"></div>
+    <div id="content" class="container">
+    </div>
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/underscore/underscore-min.js"></script>
+    <script src="../bower_components/backbone/backbone.js"></script>
+    <script src="../bower_components/marionette/lib/backbone.marionette.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/service.js"></script>
+
+    <!-- Mdels -->
+    <script src="js/modules/home/model/artist.js"></script>
+    <script src="js/modules/home/model/artists.js"></script>
+
+    <!-- Views -->
+    <script src="js/modules/home/view/create-artist-view.js"></script>
+    <script src="js/modules/home/view/artist-view.js"></script>
+    <script src="js/modules/home/view/artists-view.js"></script>
+    <script src="js/modules/home/view/home-layout.js"></script>
+
+
+    <!-- Controllers -->
+    <script src="js/modules/home/controller/controller.js"></script>
+
+    <!-- Routers -->
+    <script src="js/modules/home/router.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script>
+        $.get('templates.html').then(function(data){
+            $('body').append(data);
+            SongManager.start();
+        });
+    </script>
 </body>
 </html>
