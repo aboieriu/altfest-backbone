@@ -18,6 +18,7 @@ body {
     margin-right:20px;
     margin-bottom:20px;
     overflow:hidden;
+    border-radius:10px;
 }
 
 .card .song-name {
@@ -38,6 +39,7 @@ body {
     position:absolute;
     top:5px;
     left:5px;
+    cursor:pointer;
 }
 
 .card-top .artist-song-likes .badge {
@@ -133,4 +135,29 @@ body {
     padding-top:40%;
     cursor:pointer;
     color:#cacaca;
+}
+
+.artist-single-view {
+    color:#FFFFFF;
+    width:100%;
+    text-align:center;
+    padding:20px 0px;
+}
+
+.artist-name-title {
+    font-size:40px;
+}
+
+.go-back-btn {
+    float:left;
+    margin-left:40px;
+    margin-top:10px;
+    font-size:20px;
+    cursor:pointer;
+    color:#FFFFFF;
+}
+
+.go-back-btn:hover {
+    color:#FFFFFF;
+    text-decoration: none;
 }

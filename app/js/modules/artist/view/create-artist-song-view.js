@@ -23,10 +23,12 @@ views.CreateArtistSongView = Marionette.ItemView.extend({
             if (songData.name && songData.name.trim().length > 0
                 && songData.urlYoutube && songData.urlYoutube.trim().length > 0) {
                 var song = new model.Song(songData);
-                song.artistId = this.collection.artistId;
-
+                song.set('artistId', this.collection.artistId);
+                song.set('likes', 0);
                 song.save().then(function() {
                     self.collection.fetch();
+                    self.ui.$songName.val('');
+                    self.ui.$youtubeUrl.val('');
                 });
             }
         }

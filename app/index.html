@@ -48,6 +48,7 @@
     <script src="js/modules/home/view/artists-view.js"></script>
     <script src="js/modules/home/view/home-layout.js"></script>
     <script src="js/modules/artist/view/create-artist-song-view.js"></script>
+    <script src="js/modules/artist/view/artist-view.js"></script>
     <script src="js/modules/artist/view/artist-song-view.js"></script>
     <script src="js/modules/artist/view/artist-songs-view.js"></script>
     <script src="js/modules/artist/view/artist-layout.js"></script>
@@ -69,95 +70,10 @@
     <script src="js/app.js"></script>
 
     <script>
-        jQuery(document).ready(function(){
+        $.get('templates.html').then(function(data){
+            $('body').append(data);
             SongManager.start();
         });
-    </script>
-
-    <!-- TEMPLATES -->
-    <!-- ARTIST -->
-    <script type="text/template" id="artist-layout">
-        <div id="artist-details-region"></div>
-        <div id="artist-song-region"></div>
-        <div id="create-artist-song-region"></div>
-    </script>
-    <script type="text/template" id="artist-song-template">
-        <div class="card-top">
-            <div class="card-delete">
-                <span class="glyphicon glyphicon-remove"></span>
-            </div>
-            <div class="artist-song-likes">
-                <span class="glyphicon glyphicon-thumbs-up"></span> &nbsp;<span class="badge"><%= likes %></span>
-            </div>
-
-            <span class="glyphicon glyphicon-music rounded-white-border"></span>
-        </div>
-        <div class="song-name">
-            <%= name %>
-        </div>
-        <div class="card-actions">
-            <div class="listen-btn btn btn-primary" data-toggle="modal" data-target=".l-<%= _id %>">
-                Listen
-            </div>
-        </div>
-        <!-- listen modal -->
-        <div class="modal fade l-<%= _id %>" tabindex="-1" role="dialog" aria-labelledby="<%= name %>">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-                        <h4 class="modal-title" id="myLargeModalLabel"><%= name %></h4>
-                    </div>
-                    <div class="modal-body">
-                        <iframe width="860" height="615" src="<%= getEmbededUrl() %>" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </script>
-
-    <script type="text/template" id="create-artist-song-template">
-        <div class="card-top">
-            <span class="glyphicon glyphicon-plus rounded-white-border"></span>
-        </div>
-        <div class="artist-name">
-            <div class="form-group">
-                <label for="songNameInput">Song name</label>
-                <input type="text" class="form-control" id="songNameInput" placeholder="...">
-                <input type="text" class="form-control" id="songUrl" placeholder="Youtube url">
-            </div>
-        </div>
-
-    </script>
-    <!-- HOME -->
-    <script type="text/template" id="home-layout">
-        <div id="artists-region"></div>
-        <div id="create-artist-region"></div>
-    </script>
-    <script type="text/template" id="create-artist-template">
-        <div class="card-top">
-            <span class="glyphicon glyphicon-plus rounded-white-border"></span>
-        </div>
-        <div class="artist-name">
-            <div class="form-group">
-                <label for="artistNameInput">Artist name</label>
-                <input type="text" class="form-control" id="artistNameInput" placeholder="...">
-            </div>
-        </div>
-    </script>
-    <script type="text/template" id="artist-template">
-        <div class="card-top">
-            <div class="card-delete">
-                <span class="glyphicon glyphicon-remove"></span>
-            </div>
-            <span class="glyphicon glyphicon-user rounded-white-border"></span>
-        </div>
-        <div class="artist-name"><%= name %></div>
-        <div class="card-actions">
-            <a href="#artist/<%= _id %>" class="btn btn-primary">
-                View artist
-            </a>
-        </div>
     </script>
 </body>
 </html>
